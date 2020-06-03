@@ -1,0 +1,57 @@
+<div class="container mt-2">
+    <div *ngIf="orders === null">
+        <p>There are no orders!</p>
+    </div>
+    
+    <div *ngIf="orders">
+        <div class="pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 py-5 mb-1">
+                        <ng-container *ngIf="orders">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-0 bg-light" scope="col">
+                                                <div class="p-2 px-3 text-uppercase">Order</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2 text-uppercase">Date</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2 text-uppercase">Total</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2 text-uppercase">Status</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let order of orders" routerLink="/orders/{{ order.id }}">
+                                            <td class="align-middle">
+                                                <div class="pl-3">
+                                                    # {{ order.id }}
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                {{ order.orderDate | date: 'medium'}}
+                                            </td>
+                                            <td class="align-middle">
+                                                {{ order.total | currency }}
+                                            </td>
+                                            <td class="align-middle">
+                                                {{ order.status }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

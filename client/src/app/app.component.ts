@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     private accountService: AccountService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.loadCart();
     this.loadCurrentUser();
   }
@@ -24,7 +24,6 @@ export class AppComponent implements OnInit {
     const token = localStorage.getItem('token');
     this.accountService.loadCurrentUser(token).subscribe(
       () => {
-        console.log('load user');
       },
       (e) => {
         console.log(e);
@@ -37,7 +36,7 @@ export class AppComponent implements OnInit {
     if (cartId) {
       this.cartService.getCart(cartId).subscribe(
         () => {
-          console.log('initialized cart');
+          console.log('App loaded');
         },
         (error) => {
           console.log(error);
