@@ -14,7 +14,7 @@ export class OrderDetailComponent implements OnInit {
   order: IOrder;
 
   constructor(private ordersService: OrdersService, private activatedRoute: ActivatedRoute, private bcService: BreadcrumbService) {
-    this.bcService.set('@OrderDetails', '');
+    this.bcService.set('@orderDetails', '');
   }
 
   ngOnInit() {
