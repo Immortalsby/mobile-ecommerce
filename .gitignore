@@ -2,8 +2,6 @@ obj
 bin
 appsettings.json
 *.db
-.DS_Store
-dump.rdb
-client/package-lock.json
-client/package.json
-.gitignore
+*.rdb
+publish
+wwwroot

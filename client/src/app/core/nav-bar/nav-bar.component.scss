@@ -3,12 +3,12 @@
     min-height: 25px;
     min-width: 25px;
     border-radius: 50%;
-    font-size: 1em;
-    background:blue;
+    font-size: 1.2em;
+    background:#1F9BCF;
     color: white;
     text-align: center;
-    top: -12px;
-    right: 32px;
+    top: -1em;
+    right: 3.5em;
 }
 
 *:focus {
@@ -26,4 +26,41 @@ a{
 
 .logo {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+    a {
+        color: #000 !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    a {
+        color: #000 !important;
+    }
+    .cart-no {
+        min-height: 22px;
+        min-width: 22px;
+        top: -0.8em;
+        right: 2em;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .cart-no {
+        min-height: 22px;
+        min-width: 22px;
+        top: -0.9em;
+        right: 1em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .cart-no {
+        min-height: 18px;
+        min-width: 18px;
+        font-size: 1em;
+        top: -0.8em;
+        right: 1em;
+    }
 }

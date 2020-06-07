@@ -1,44 +1,30 @@
 {
-    "cSpell.words": [
-        "Toastr",
-        "bc",
-        "borderless",
-        "c",
-        "cf",
-        "ct",
-        "d",
-        "downlevel",
-        "dtos",
-        "emailexists",
-        "esnext",
-        "eug",
-        "g",
-        "h",
-        "j",
-        "loq",
-        "m",
-        "n",
-        "nsy",
-        "ny",
-        "p",
-        "pk",
-        "pk test d tilrd g loq bc nsy x ny m t j cf wm",
-        "sk",
-        "sk test p n ct h zoa c xa eug tax xybh",
-        "skinet",
-        "t",
-        "table",
-        "table borderless",
-        "tax",
-        "test",
-        "tilrd",
-        "unstyled",
-        "uuidv",
-        "wm",
-        "x",
-        "xa",
-        "xybh",
-        "zipcode",
-        "zoa"
-    ]
+    "deploy.reloaded": {
+        "packages": [
+            {
+                "name": "Version 1.0.0",
+                "description": "Package version 1.0.0",
+
+                "files": [
+                    "publish/**"
+                ]
+            }
+        ],
+
+        "targets": [
+            {
+                "type": "sftp",
+                "name": "Linux",
+                "description": "SFTP folder",
+
+                "host": "217.69.6.148", "port": 22,
+                "user": "root", "password": "sby2345",
+
+                "dir": "/var/www/vhosts/boyuanshi.com/demoshop.boyuanshi.com",
+                "mappings": {
+                    "publish/**": "/"
+                }
+            }
+        ]
+    }
 }
